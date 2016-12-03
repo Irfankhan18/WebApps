@@ -14,6 +14,9 @@ app.use(function(req, res, next){
    res.header("Access-Control-Allow-Headers","Content-Type, Authorization");
    next();
 })
+app.post('/auth/register', function(req, res ){
+  console.log(req.body);
+})
 app.get('/api/message', GetMessages)
 app.post('/api/message', function(req, res){
   console.log(req.body);
